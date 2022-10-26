@@ -113,6 +113,7 @@ public class JsonLdToRdfTest {
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil");
 
         JsonLdOptions opts = new JsonLdOptions();
+        opts.setExpandBNodeList(false);
         assertEquals("[{\"@id\":\"_:b0\",\"http://www.w3.org/1999/02/22-rdf-syntax-ns#first\":[{\"@id\":\"Arnold\"}],\"http://www.w3.org/1999/02/22-rdf-syntax-ns#rest\":[{\"@list\":[{\"@id\":\"Bob\"},{\"@id\":\"Catherine\"}]}]}]", JsonUtils.toString(new JsonLdApi(opts).fromRDF(rdf)));
 
         opts.setExpandBNodeList(true);

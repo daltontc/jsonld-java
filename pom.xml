@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.jsonld-java</groupId>
 	<artifactId>jsonld-java-parent</artifactId>
-	<version>0.13.5-SNAPSHOT</version>
+	<version>0.13.5.1-MOBI</version>
 	<name>JSONLD Java :: Parent</name>
 	<description>Json-LD Java Parent POM</description>
 	<packaging>pom</packaging>
@@ -468,79 +468,22 @@
 		</pluginManagement>
 	</build>
 
-	<repositories>
-		<repository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus Snapshots</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-
 	<distributionManagement>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus Snapshots</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</snapshotRepository>
 		<repository>
-			<id>sonatype-nexus-staging</id>
-			<name>Nexus Release Repository</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>inovex</id>
+			<url>https://nexus.inovexcorp.com/nexus/content/repositories/public-maven-prod-hosted/</url>
 		</repository>
+		<snapshotRepository>
+			<id>inovex</id>
+			<url>https://nexus.inovexcorp.com/nexus/content/repositories/foundry-maven-dev-hosted/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
-	<profiles>
-		<profile>
-			<id>sonatype-oss-release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar-no-fork</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+	<repositories>
+		<repository>
+			<id>inovex</id>
+			<url>https://nexus.inovexcorp.com/nexus/content/repositories/public-maven-prod-group/</url>
+		</repository>
+	</repositories>
 </project>
 

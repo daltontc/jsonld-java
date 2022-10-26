@@ -392,8 +392,9 @@ public class JsonLdProcessorTest {
         Object result = null;
 
         // OPTIONS SETUP
-        final JsonLdOptions options = new JsonLdOptions(
+        JsonLdOptions options = new JsonLdOptions(
                 "http://json-ld.org/test-suite/tests/" + test.get("input"));
+        options.setExpandBNodeList(false);
         final TestDocumentLoader testLoader = new TestDocumentLoader(
                 "http://json-ld.org/test-suite/tests/");
         options.setDocumentLoader(testLoader);

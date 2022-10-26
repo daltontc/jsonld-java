@@ -103,7 +103,7 @@ public class JsonLdOptions {
     private Boolean pruneBlankNodeIdentifiers = false;
     private Boolean requireAll = false;
     private Boolean allowContainerSetOnType = false;
-    private Boolean expandBNodeList = false;
+    private Boolean expandBNodeList = true;
 
     // RDF conversion options :
     // http://www.w3.org/TR/json-ld-api/#serialize-rdf-as-json-ld-algorithm
