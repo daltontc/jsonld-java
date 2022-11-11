@@ -1270,6 +1270,10 @@ public class JsonLdApi {
         return generateBlankNodeIdentifier(null);
     }
 
+    public Map<String, String> getBlankNodeIdentifierMap() {
+        return blankNodeIdentifierMap;
+    }
+
     /***
      * _____ _ _ _ _ _ _ | ___| __ __ _ _ __ ___ (_)_ __ __ _ / \ | | __ _ ___ _
      * __(_) |_| |__ _ __ ___ | |_ | '__/ _` | '_ ` _ \| | '_ \ / _` | / _ \ |
